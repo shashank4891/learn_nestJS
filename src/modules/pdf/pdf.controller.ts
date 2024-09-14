@@ -11,4 +11,10 @@ export class PdfController {
         const htmlString = await this.pdfService.getPreviewHtml(mockData);
         return htmlString
     }
+
+    @Get('/htmlToPDF')
+    async exportPDF() {
+        const pdfUrl = await this.pdfService.htmlToPdf(mockData);
+        return {url: pdfUrl};
+    }
 }
