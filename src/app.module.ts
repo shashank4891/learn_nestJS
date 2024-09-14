@@ -9,6 +9,7 @@ import { AwbModule } from './modules/awb/awb.module';
 import { Awb } from './modules/awb/awb.entity';
 import { Invoice } from './modules/awb/invoice.entity';
 import { Scan } from './modules/awb/scan.entity';
+import { PdfModule } from './modules/pdf/pdf.module';
 
 @Module({
   imports: [
@@ -29,6 +30,8 @@ import { Scan } from './modules/awb/scan.entity';
     }),
 
     AwbModule,
+
+    PdfModule,
   ],
   controllers: [AppController],
   providers: [AppService],
